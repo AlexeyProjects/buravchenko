@@ -50,7 +50,6 @@ body {
           justify-content: center;
 }
 .procedure-item {
-  color: rgba(0, 0, 0, 0);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -79,6 +78,16 @@ body {
   content: "";
   width: 0%;
   height: 100%;
+}
+.procedure-item__title {
+  -webkit-transition-delay: 2s;
+          transition-delay: 2s;
+  -webkit-transition: 0.9s ease-in-out;
+  transition: 0.9s ease-in-out;
+  color: rgba(0, 0, 0, 0);
+}
+.procedure-item__title.loaded {
+  color: black;
 }
 .procedure-item__descr {
   -webkit-transition-delay: 2s;
@@ -198,7 +207,7 @@ body {
 .procedure-item.loaded::before {
   width: 100%;
 }
-.procedure-item.loaded .procedure-item__descr {
+.procedure-item.loaded .procedure-item__descr.loaded {
   opacity: 1;
 }
 .procedure-item.today::before {

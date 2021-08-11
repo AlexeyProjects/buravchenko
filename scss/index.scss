@@ -34,7 +34,6 @@ body {
 	display: flex;
 	justify-content: center;
 	&-item {
-		color: rgba(0,0,0,0);
 		display: flex;
 		align-items:center;
 		justify-content: center;
@@ -56,6 +55,14 @@ body {
 			width: 0%;
 			height: 100%;
 
+		}
+		&__title {
+			transition-delay: 2s;
+			transition: .9s ease-in-out;
+			color: rgba(0,0,0,0);
+			&.loaded {
+				color: rgba(0,0,0,1);
+			}
 		}
 		&__descr {
 			transition-delay: 2s;
@@ -178,8 +185,13 @@ body {
 			&::before {
 				width: 100%;
 			}
+			// .procedure-item__title {
+			// 	color: rgba(0,0,0,1);
+			// }
 			.procedure-item__descr {
-				opacity: 1;
+				&.loaded {
+					opacity: 1;
+				}
 			}
 		}
 		&.today {	
